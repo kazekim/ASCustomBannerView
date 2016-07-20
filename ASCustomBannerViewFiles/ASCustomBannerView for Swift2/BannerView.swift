@@ -44,6 +44,38 @@ class BannerView: UIView
         timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("actionAutoSlide"), userInfo: nil, repeats: true)
     }
     
+    func refreshBanner(imagesArray:[UIImage])
+    {
+        list.removeAll()
+        for i in 0 ... imagesArray.count-1
+        {
+            list.insert(imagesArray[i])
+        }
+        
+        for i in 0 ... 4
+        {
+            switch i {
+            case 0:
+                self.images[i].image = self.list.getBeforePrevious().image
+                break
+            case 1:
+                self.images[i].image = self.list.getPrevious().image
+                break
+            case 2:
+                self.images[i].image = self.list.getCurrent().image
+                break
+            case 3:
+                self.images[i].image = self.list.getRear().image
+                break
+            case 4:
+                self.images[i].image = self.list.getAfterRear().image
+                break
+            default:
+                break
+            }
+        }
+    }
+    
     private func createImageList(array:[UIImage])
     {
         for i in 0 ... array.count-1

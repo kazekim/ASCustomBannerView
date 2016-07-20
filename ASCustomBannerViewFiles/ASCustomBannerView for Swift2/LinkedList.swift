@@ -80,4 +80,9 @@ class LinkedList
             size+=1
         }
     }
+    
+    func removeAll()
+    {
+        self.size = 0
+    }
 }

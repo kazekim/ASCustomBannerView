@@ -50,10 +50,16 @@ Get screen size width:
 let widthScreen = CGFloat()
 widthScreen = UIScreen.mainScreen().bounds.width
 ```
-Instantiate object:
+Instantiate class BannerView:
 ```swift
 baner.createBanner(arrayImages, widthScreen: widthScreen)
 ```
+You can also recharge the view items:
+```swift
+baner.refreshBanner(arrayImages)
+```
+
+
 
 <img src="http://www.floridauniversitaria.es/es-ES/noticias/PublishingImages/aviso_importante.png" width="30"> Images should be for proper operation of 720x300
 
