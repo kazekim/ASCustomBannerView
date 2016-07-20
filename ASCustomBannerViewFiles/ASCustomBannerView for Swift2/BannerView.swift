@@ -24,7 +24,7 @@ class BannerView: UIView
     private var images = [UIImageView]()
     private var timer = NSTimer()
     
-    func createBanner(imagesArray:[String], widthScreen:CGFloat)
+    func createBanner(imagesArray:[UIImage], widthScreen:CGFloat)
     {
         if widthScreen > 415
         {
@@ -44,11 +44,11 @@ class BannerView: UIView
         timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: Selector("actionAutoSlide"), userInfo: nil, repeats: true)
     }
     
-    private func createImageList(array:[String])
+    private func createImageList(array:[UIImage])
     {
         for i in 0 ... array.count-1
         {
-            list.insert(UIImage(named: array[i])!)
+            list.insert(array[i])
         }
         
         for i in 0 ... 4

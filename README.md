@@ -35,8 +35,15 @@ Create a variable of type BannerView:
 ```
 Import images and create a array of images:
 ```swift
-let imagesArray = [String]()
-imagesArray = ["img1","img2","img3","img4"]
+//at this step, you download images from a URL or local directory
+let imageName = ["img1","img2","img3","img4"]
+
+//you create array of type UIImage
+var arrayImages = [UIImage]()
+for i in 0 ... imageName.count-1
+{
+    arrayImages.append(UIImage(named: imageName[i])!)
+}
 ```
 Get screen size width:
 ```swift
@@ -45,7 +52,7 @@ widthScreen = UIScreen.mainScreen().bounds.width
 ```
 Instantiate object:
 ```swift
-baner.createBanner(imagesArray, widthScreen: widthScreen)
+baner.createBanner(arrayImages, widthScreen: widthScreen)
 ```
 
 <img src="http://www.floridauniversitaria.es/es-ES/noticias/PublishingImages/aviso_importante.png" width="30"> Images should be for proper operation of 720x300
