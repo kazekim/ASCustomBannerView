@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ASCustomBannerView"
-  s.version      = "0.0.1"
+  s.version      = "1.0.1"
   s.summary      = "A short description of ASCustomBannerView."
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/kazekim/ASCustomBannerView.git", :tag => "1.0" }
+  s.source       = { :git => "http://github.com/kazekim/ASCustomBannerView.git", :tag => "1.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
